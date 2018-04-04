@@ -1,0 +1,24 @@
+@font-face {
+  font-family: baloo;
+  src: url(Baloo-Regular.tff);
+}
+
+@font-face {
+  font-family: dosis;
+  src: url(Dosis_Regular.otf);
+}
+body {
+    background-color: #ffc8a1;
+}
+button {
+    background-color: #f9bf22;
+    color: black;
+    text-align: center;
+    font-size: 16px;
+}
+h1 {
+    color:#f25a3c; font-family:cursive;
+}
+p {
+    color: grey; font-family:sans-serif;
+}
