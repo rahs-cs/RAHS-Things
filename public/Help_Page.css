@@ -5,6 +5,9 @@
   h2{
     color: tomato;
   }
+  h4{
+    color: white;
+  }
  body {
    font-family: sans-serif;
    padding: 50px;
