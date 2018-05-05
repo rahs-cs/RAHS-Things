@@ -3,15 +3,35 @@
   <head>
       <center><title>  Post Viewer </title></center>
       <link rel="stylesheet" href="viewPicture.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script>
+      function clickCounter() {
+      if(typeof(Storage) !== "undefined") {
+          if (localStorage.clickcount) {
+              localStorage.clickcount = Number(localStorage.clickcount)+1;
+          }
+          else {
+              localStorage.clickcount = 1;
+          }
+          document.getElementById("result").innerHTML = localStorage.clickcount + " likes";
+      } else {
+          document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+      }
+    }
+    </script>
   </head>
   <body>
-    <button type="button" name= "a">Go Back</button>
+    <form action="https://www.google.com">
+      <button class="return" type = "submit" value="Go back"> Go Back</button>
+    </form>
     <h1> User's Post </h1>
-    <img src="http://newsinflight.com/wp-content/uploads/2017/09/Screen-Shot-2017-09-27-at-5.53.17-pm.png" alt="image can not be found" width="500" height="500">
-    <!-- Need to link the photo from feed-->
-    <h2> Caption <h2/>
-    <p> Here is where the post's caption goes<p/>
-    <button type="button" name="b"> <a name="like"> Like </a></button>
-
+    <!--Link the user's name here-->
+    <center><img src="http://newsinflight.com/wp-content/uploads/2017/09/Screen-Shot-2017-09-27-at-5.53.17-pm.png" alt="image can not be found" width="500" height="500"></center>
+    <!--link the photo from feed-->
+    <div class="like"><button onclick="clickCounter()" type="button" class="fa fa-heart"> Like </button></div>
+    <div class="count" id="result"></div>
+    <h2> Caption </h2>
+    <p> Here is where the post's caption goes</p>
+    <!--Link the comment here-->
   <body/>
 </html>

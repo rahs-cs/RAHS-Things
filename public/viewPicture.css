@@ -1,20 +1,51 @@
 body {
     background-color: #ffc8a1;
 }
-button {
+button.return{
+  text-align: left;
   margin: 0px;
   padding: 4px 12px;
   border-radius: 200px;
   background-color: #f9bf22;
   color: #fff;
   text-decoration: none;
+  text-align: left;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+button.fa-heart{
+  margin: 0px;
+  padding: 4px 12px;
+  border-radius: 200px;
+  background-color: #f9bf22;
+  color: #fff;
+  text-decoration: none;
+  text-align: left;
+  font-size: 20px;
+}
+div.like{
+  position: relative;
+  left: 830px;
+  top: 20px;
+}
+div.count{
+  position: relative;
+  font-family: sans-serif;
+  color: grey;
+  left: 750px;
+}
+.fa {
+  user-select: none;
+}
+.fa:hover{
+color: #f25a3c;
 }
 h1 {
-    color:#f25a3c; font-family:sans-serif;
+    color:#f25a3c; font-family:sans-serif;text-align: center;
 }
 h2 {
-  color:grey; font-family: sans-serif;
+  color:grey; font-family: sans-serif; text-align: center;
 }
 p {
-    color: grey; font-family:sans-serif;
+    color: grey; font-family:sans-serif;text-align: center;
 }
