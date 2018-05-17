@@ -7,10 +7,10 @@
     padding: 12px 16px;
     font-size: 30px;
     cursor: pointer;
-}
+  }
 
 .btn:hover {
-    background-color: LightSalmon;
+    background-color: lightsalmon;
 }
   h1{
     color: tomato;
