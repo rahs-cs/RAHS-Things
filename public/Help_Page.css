@@ -1,11 +1,11 @@
 
 /* Style buttons */
 .btn {
-    background-color: Tomato;
+    background-color: peachpuff;
     border: none;
     color: white;
     padding: 12px 16px;
-    font-size: 16px;
+    font-size: 30px;
     cursor: pointer;
 }
 
