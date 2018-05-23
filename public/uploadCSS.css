@@ -57,14 +57,6 @@ button {
     color: black;
     text-decoration: none;
     cursor: pointer;
-
-div#myButton{
-  background-color: white;
-  color: black;
-  border-radius: 50px;
-  padding: 20px;
-  text-align: center;
-  font-size: 16px;
 }
 
 input[type="text"] {
@@ -74,10 +66,12 @@ input[type="text"] {
   border-bottom: 1px solid #888;
   transition: 0.25s;
 }
+
 input[type="text"]:focus {
   outline: none;
   border-bottom: 2px solid #f25a3c;
 }
+
 textarea {
   padding: 4px;
   margin: 4px 0px;
@@ -88,6 +82,7 @@ textarea {
   transition: 0.25s;
   font-family: "Helvetica", serif;
 }
+
 textarea:focus {
   outline: none;
   border-bottom: 2px solid #f25a3c;
