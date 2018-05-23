@@ -1,7 +1,7 @@
 
 /* Style buttons */
 .btn {
-    background-color: peachpuff;
+    background-color: #ffc8a1;
     border: none;
     color: white;
     padding: 12px 16px;
@@ -13,20 +13,20 @@
     background-color: lightsalmon;
 }
   h1{
-    color: tomato;
+    color: #f25a3c;
   }
   h2{
-    color: tomato;
+    color: #f25a3c;
   }
   h4{
-    color: white;
+    color: #ffffff;
   }
  body {
    font-family: sans-serif;
    padding: 50px;
    display: block;
    flex-direction: column;
-   background-color: peachpuff;
+   background-color: #ffc8a1;
    border: 10px solid #ffffff;
    margin: 40;
    outline-color: #ffffff
@@ -47,7 +47,7 @@
    border: none;
    border-bottom: 1px solid #888;
    transition: 0.25s;
-   background-color: peachpuff;
+   background-color: #ffc8a1;
  }
  input[type="text"]:focus {
    outline: none;
