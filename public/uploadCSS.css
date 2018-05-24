@@ -24,54 +24,6 @@ button {
   text-decoration: none;
 }
 
-.modal{
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0);
-  opacity: 0;
-}
-
-.modal-content{
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-.close{
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-input[type="text"] {
-  padding: 4px;
-  margin: 4px 0px;
-  border: none;
-  border-bottom: 1px solid #888;
-  transition: 0.25s;
-}
-
-input[type="text"]:focus {
-  outline: none;
-  border-bottom: 2px solid #f25a3c;
-}
-
 textarea {
   padding: 4px;
   margin: 4px 0px;
@@ -81,42 +33,4 @@ textarea {
   border-radius: 2px;
   transition: 0.25s;
   font-family: "Helvetica", serif;
-}
-
-textarea:focus {
-  outline: none;
-  border-bottom: 2px solid #f25a3c;
-}
-
-.dialog {
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0);
-  opacity: 0;
-  display: none;
-}
-.dialog.show {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 1;
-}
-.dialog-close {
-  position: fixed;
-  top: 16px;
-  left: 16px;
-  font-size: 48px;
-  color: #f25a3c;
-}
-.diag-inner {
-  width: 50%;
-  height: 50%;
-  background: #fff;
-  padding: 12px;
-  border-radius: 6px;
 }
