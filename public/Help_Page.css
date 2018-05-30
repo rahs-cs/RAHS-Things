@@ -1,17 +1,4 @@
 
-/* Style buttons */
-.btn {
-    background-color: #ffc8a1;
-    border: none;
-    color: white;
-    padding: 12px 16px;
-    font-size: 30px;
-    cursor: pointer;
-  }
-
-.btn:hover {
-    background-color: lightsalmon;
-}
   h1{
     color: #f25a3c;
   }
