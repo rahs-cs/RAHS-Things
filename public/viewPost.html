@@ -1,0 +1,34 @@
+<DOCTYPE html>
+<html>
+  <head>
+      <title>  Post Viewer </title>
+      <link rel="stylesheet" href="viewPicture.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- you can delete this if you need to (everything in script)-->
+      <script>
+      function clickCounter() {
+      if(typeof(Storage) !== "undefined") {
+          if (localStorage.clickcount) {
+              localStorage.clickcount = Number(localStorage.clickcount)+1;
+          }
+          else {
+              localStorage.clickcount = 1;
+          }
+          document.getElementById("result").innerHTML = localStorage.clickcount + " likes";
+      } else {
+          document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <a href="HomePage.html"> <!-- this will be link to feed -->
+      <button class="return" type = "submit" value="Go back"> Back</button>
+    </a>
+    <h1> User's Post </h1>  <!--Link the user's name here-->
+    <p> Here is where the post's caption goes</p>
+    <!--Link the comment here-->
+    <div class="like"><button onclick="clickCounter()" type="button" class="fa fa-heart"> Like </button></div>
+    <div class="count" id="result"></div>
+  <body/>
+</html>
