@@ -1,0 +1,63 @@
+body{
+  background-color: #ffc8a1;
+  font-family: Helvetica;
+}
+
+.title{
+  color: #f25a3c;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f25a3c;
+}
+
+  li {
+      float: left;
+  }
+
+  li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+
+
+  li a:hover {
+      background-color: #111;
+  }
+
+}
+
+hr{
+  color: #FFFFFF;
+}
+
+.FeedHeader{
+  padding: 15px;
+}
+
+.Feed{
+  background-color: #ebebe0;
+  width: 80%
+  height: 300px;
+  overflow: scroll;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.SamplePost{
+
+}
+
+.SamplePostText{
+  padding: 15px;
+}
+
+.Border{
+  border: 10px solid #FFFFFF;
+}
