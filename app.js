@@ -4,6 +4,13 @@ const logger = require('morgan')
 const mongoose = require('mongoose')
 const path = require('path')
 const bodyParser = require('body-parser')
+const session = require('express-session')
+const MongoStore = require('connect-mongo')(session)
+const passport = require('passport')
+
+const User = require('./models/User')
+
+const config = require('./config.json')
 
 app.set('port', 3066)
 app.use(logger('dev'))
@@ -18,10 +25,40 @@ db.once('open', () => {
   console.log(`DB at ${'mongodb://localhost/rahsthings'} Ready!`)
 })
 
+app.use(session({
+  secret: config.sessionSecret,
+  store: new MongoStore({ url: config.db.url }),
+  resave: true,
+  saveUninitialized: false,
+  cookie: { maxAge: 365 * 24 * 60 * 60 * 1000 }
+}))
+
+passport.serializeUser((user, done) => {
+  User.findById(user._id, (err, userDb) => {
+    if (err) {
+      done (err)
+    } else {
+      done(null, userDb)
+    }
+  })
+})
+passport.deserializeUser((obj, done) => {
+  User.findById(obj._id, (err, userDb) => {
+    if (err) {
+      done (err)
+    } else {
+      done(null, userDb)
+    }
+  })
+})
+
+app.use(passport.initialize())
+app.use(passport.session())
 
 app.use('/', express.static(path.join(__dirname, 'public')))
 
 app.use('/api', require('./routes/api'))
+app.use('/auth', require('./routes/auth')(passport))
 
 
 app.use((req, res) => {

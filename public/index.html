@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="/root/style.css">
+    <title>Home Page</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  </head>
+  <body>
+      <div class="nav">
+        <div class="navitem"><a href="upload">Upload</a></div>
+        <div class="navitem"><a href="posts?me">My Content</a></div>
+        <!-- <div class="navitem"><a href="Search_Page">Search</a></div> --> <!-- better luck next time -->
+        <div class="navitem"><a href="help">Help</a></div>
+        <div class="navitem log-in-out"><a href="auth">Login</a></div>
+      </div>
+
+    <div class="title" align="center">
+    <h1>
+      RAHS Things
+    </h1>
+  </div>
+
+  <div class="Border">
+    <ul id="posts">
+    </ul>
+  </div>
+
+  </body>
+  <script>
+  post_list = document.getElementById("posts")
+
+  setTimeout(updatePosts, 15000)
+  updatePosts()
+
+  function updatePosts(){
+    fetch('/api/posts', {credentials: 'include'}).then(r => {return r.json()}).then(res => {
+      post_list.innerHTML = ""
+      res.reverse()
+      res.forEach(post => {
+        post_list.appendChild(strToDom(`<li class="post"><h1>${post.title}</h1><h2>${post.content}</h2><a class="user" href="/posts?${post.author._id}"><img class="profilepic" src="${post.author.avatar}"><i>${post.author.name}</i></a></li>`))
+      })
+    })
+  }
+
+  fetch('/api/user', {credentials: 'include'}).then(r => {return r.json()}).then(user => {
+    document.querySelector('.log-in-out').innerHTML = '<a href="/auth/logout">Logout</a>'
+  }).catch(err => {
+    // die quieter
+  })
+
+  window.strToDom = function strToDom (str) {
+    return new DOMParser().parseFromString(str, 'text/html').body.childNodes[0]
+  }
+
+  </script>
+</html>
