@@ -1,0 +1,109 @@
+body{
+  background-color: #ffc8a1;
+  font-family: Helvetica;
+}
+
+.title{
+  color: #f25a3c;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f25a3c;
+}
+
+li.post {
+  border: 2px solid white;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+li.post h1 {
+  margin: 8px;
+}
+
+li.post h2{
+  margin: 8px;
+}
+
+li.post .user {
+  margin: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+}
+
+li.post .user img {
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  background: #f25a3c;
+}
+
+.navitem {
+  display: inline;
+}
+
+.navitem a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+
+  li a:hover {
+    background-color: #111;
+  }
+
+}
+
+hr{
+  color: #FFFFFF;
+}
+
+.FeedHeader{
+  padding: 15px;
+}
+
+.Feed{
+  background-color: #ebebe0;
+  width: 80%;
+  height: 300px;
+  overflow: scroll;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.SamplePost{
+
+}
+
+.SamplePostText{
+  padding: 15px;
+}
+
+.Border{
+  border: 10px solid #FFFFFF;
+  max-width: 600px;
+  margin: auto;
+}
+
+a.button {
+  margin: 0px;
+  padding: 4px 12px;
+  border-radius: 200px;
+  background-color: #f25a3c;
+  color: #fff;
+  text-decoration: none;
+}
